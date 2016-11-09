@@ -75,6 +75,8 @@ NSString *const kLEONetworkReachableViaWWANNotification = @"LEONetworkReachableV
     self.internetReachability =
     [Reachability reachabilityForInternetConnection];
     [self.internetReachability startNotifier];
+    
+    self.status = self.internetReachability.currentReachabilityStatus;
 }
 
 - (void)startHostNotifier {
