@@ -108,6 +108,8 @@ Just drag the LEONetworkKit folder into your project.
 	// Network status changed
 	extern NSString *const kLEONetworkStatusChangedNotification;
 	```
+* Update network status when call `startInternetNotifier`.
+
 
 ### V 0.0.1
 
