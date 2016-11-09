@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LEONetworkKit"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "LEONetworkKit is a part of LEOKit. Support: http://LeoDev.me"
   s.homepage     = "https://github.com/iTofu/LEONetworkKit"
   s.license      = "MIT"
