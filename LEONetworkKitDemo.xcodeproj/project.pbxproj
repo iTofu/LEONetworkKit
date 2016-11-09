@@ -241,6 +241,7 @@
 				TargetAttributes = {
 					B3E9A86D1DD3249A0039D35A = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4BZ2VM448J;
 						ProvisioningStyle = Automatic;
 					};
 					B3E9A8861DD3249B0039D35A = {
@@ -464,7 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4BZ2VM448J;
 				INFOPLIST_FILE = LEONetworkKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -481,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4BZ2VM448J;
 				INFOPLIST_FILE = LEONetworkKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

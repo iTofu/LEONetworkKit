@@ -41,6 +41,14 @@ static NSString *LEONetworkStatusDes[] = {
     desLabel.text = @"Please change network now";
     
     
+    // 1. You could observing all network status changed notification
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNetworkStatusChanged:)
+                                                 name:kLEONetworkStatusChangedNotification
+                                               object:nil];
+    
+    /*
+    // 2. Or you could observing one of notifications what you care
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleNetworkNotReachable:)
                                                  name:kLEONetworkNotReachableNotification
@@ -55,6 +63,7 @@ static NSString *LEONetworkStatusDes[] = {
                                              selector:@selector(handleNetworkReachableViaWWAN:)
                                                  name:kLEONetworkReachableViaWWANNotification
                                                object:nil];
+     */
 }
 
 - (void)handelNetworkStatusChanged {
@@ -64,6 +73,19 @@ static NSString *LEONetworkStatusDes[] = {
 }
 
 #pragma mark - Handle Notification
+
+- (void)handleNetworkStatusChanged:(NSNotification *)noti {
+    // Use `[LEONetworkStatus status]` - Fast Way!
+    [self handelNetworkStatusChanged];
+    
+    // Use Notification
+    Reachability *reach = noti.object;
+    NSParameterAssert([reach isKindOfClass:[Reachability class]]);
+    NetworkStatus status = reach.currentReachabilityStatus;
+    
+    NSLog(@"From Notification: %@\n---",  LEONetworkStatusDes[status]);
+}
+
 
 - (void)handleNetworkNotReachable:(NSNotification *)noti {
     // Use `[LEONetworkStatus status]` - Fast Way!

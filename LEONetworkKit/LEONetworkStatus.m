@@ -12,6 +12,9 @@
 #import "LEONetworkStatus.h"
 
 
+// Network status changed
+NSString *const kLEONetworkStatusChangedNotification    = @"LEONetworkStatusChangedNotification";
+
 // Network toggle to not reachable
 NSString *const kLEONetworkNotReachableNotification     = @"LEONetworkNotReachableNotification";
 // Network toggle to WiFi
@@ -93,18 +96,24 @@ NSString *const kLEONetworkReachableViaWWANNotification = @"LEONetworkReachableV
     switch (networkStatus) {
         case NotReachable: {
             self.status = NotReachable;
+            [[NSNotificationCenter defaultCenter] postNotificationName:kLEONetworkStatusChangedNotification
+                                                                object:reachability];
             [[NSNotificationCenter defaultCenter] postNotificationName:kLEONetworkNotReachableNotification
                                                                 object:reachability];
             break;
         }
         case ReachableViaWiFi: {
             self.status = ReachableViaWiFi;
+            [[NSNotificationCenter defaultCenter] postNotificationName:kLEONetworkStatusChangedNotification
+                                                                object:reachability];
             [[NSNotificationCenter defaultCenter] postNotificationName:kLEONetworkReachableViaWiFiNotification
                                                                 object:reachability];
             break;
         }
         case ReachableViaWWAN: {
             self.status = ReachableViaWWAN;
+            [[NSNotificationCenter defaultCenter] postNotificationName:kLEONetworkStatusChangedNotification
+                                                                object:reachability];
             [[NSNotificationCenter defaultCenter] postNotificationName:kLEONetworkReachableViaWWANNotification
                                                                 object:reachability];
             break;

@@ -13,6 +13,9 @@
 #import "Reachability.h" // Version 5.0, 2016-05-05
 
 
+// Network status changed
+extern NSString *const kLEONetworkStatusChangedNotification;
+
 // Network toggle to not reachable
 extern NSString *const kLEONetworkNotReachableNotification;
 // Network toggle to WiFi
