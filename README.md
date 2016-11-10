@@ -26,15 +26,15 @@ Welcome to my blog: http://LeoDev.me
 
 ## Installation
 
+### CocoaPods
+
 LEONetworkKit is available on [CocoaPods](https://cocoapods.org/). Just add the following to your project Podfile:
 
 ```ruby
 pod 'LEONetworkKit' # Podfile
 ```
 
-
-
-## Non-CocoaPods Installation
+### Non-CocoaPods
 
 Just drag the LEONetworkKit folder into your project.
 
