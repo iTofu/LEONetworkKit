@@ -38,7 +38,7 @@ static NSString *LEONetworkStatusDes[] = {
     [self.view addSubview:desLabel];
     self.desLabel          = desLabel;
     
-    desLabel.text = @"Please change network now";
+    desLabel.text = LEONetworkStatusDes[[LEONetworkStatus status]];
     
     
     // 1. You could observing all network status changed notification
