@@ -8,7 +8,7 @@
 //  GitHub: http://github.com/iTofu
 //  Mail:   mailto:devtip@163.com
 //
-//  V 0.0.2
+//  V 0.0.3
 
 
 #import <Foundation/Foundation.h>
