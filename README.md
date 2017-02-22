@@ -100,6 +100,11 @@ Just drag the LEONetworkKit folder into your project.
 
 ## ChangeLog
 
+### V 0.0.4
+
+* Fix issue.
+
+
 ### V 0.0.3
 
 * Update network status when call `startInternetNotifier`.

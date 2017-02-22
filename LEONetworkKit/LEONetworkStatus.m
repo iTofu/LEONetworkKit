@@ -87,9 +87,10 @@ NSString *const kLEONetworkReachableViaWWANNotification = @"LEONetworkReachableV
 
 - (void)reachabilityChanged:(NSNotification *)noti {
     Reachability *curReach = noti.object;
-    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
     
-    [self handleReachabilityChanged:curReach];
+    if ([curReach isKindOfClass:[Reachability class]]) {
+        [self handleReachabilityChanged:curReach];
+    }
 }
 
 - (void)handleReachabilityChanged:(Reachability *)reachability {
